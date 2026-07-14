@@ -51,9 +51,9 @@ def main():
         for chunk in agent_executor.stream(
             {"messages": [HumanMessage(content=user_input)]}
         ):
-            # printing the agent response in chunks
+            # check the agent message in chunks
             if "agent" in chunk and "messages" in chunk["agent"]:
-                # getting the message
+                # getting the message without changing the line
                 for message in chunk["agent"]["messages"]:
                     # printing the message
                     print(message.content, end="")
