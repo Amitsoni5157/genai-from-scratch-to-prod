@@ -26,7 +26,7 @@ def extract_text_from_pdf(pdf_file):
     text = ""
     for page in pdf_reader.pages:
         text += page.extract_text() + "\n"
-        return text
+    return text
 
 def extract_text_from_file(upload_file):
     if upload_file.type == "application/pdf":
